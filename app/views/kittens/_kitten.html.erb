@@ -1,0 +1,5 @@
+<li>
+  <%= kitten.name %>
+  <%= link_to "Show", kitten_path(kitten.id) %>
+  <%= link_to "Delete", kitten_path(kitten.id), :method => 'delete' %>
+</li>
