@@ -1,25 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Simple Kittens API project from The Odin Project.
 
-Things you may want to cover:
+Return JSON data instead of rendering HTML
 
-* Ruby version
+Using RestClient, you can construct query to the app and retrieve json data:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# kittens_api
+```
+#to index all kittens:
+2.3.1 :002 > require 'rest-client'
+ => true
+2.3.1 :003 > response = RestClient.get("http://localhost:3000/kittens", :accept => :json)
+ => <RestClient::Response 200 "[{\"id\":2,\"n...">
+ 2.3.1 :006 > response = RestClient.get("http://localhost:3000/kittens/2", :accept => :json)
+ => <RestClient::Response 200 "{\"id\":2,\"na...">
+ 
+ ```
+ 
